@@ -46,6 +46,7 @@ export default function Login() {
         </Row>
         <Row style={{ marginTop: "35px" }}>
           <Col
+          
             style={{
               display: "flex",
               flexDirection: "column",
@@ -53,6 +54,7 @@ export default function Login() {
             }}
           >
             <div
+            className="loginBox"
               style={{
                 width: "30vw",
                 height: "400px",

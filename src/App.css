@@ -44,3 +44,14 @@
   border-radius: 6px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 860px) {
+  .loginBox{
+    width: 50vw !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .loginBox{
+    width: 70vw !important;
+  }
+}

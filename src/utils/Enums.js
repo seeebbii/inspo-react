@@ -3,7 +3,8 @@
 export const STRINGS={
     ROUTES:{
         LOGIN:"/",
-        MAIN:"/main"
+        MAIN:"/main",
+        DASHBOARD:'/dashboard'
     }
 
 

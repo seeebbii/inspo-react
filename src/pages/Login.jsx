@@ -1,5 +1,6 @@
 import { Switch } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Button,
   Col,
@@ -9,9 +10,11 @@ import {
   Label,
   Row,
 } from "reactstrap";
+import { STRINGS } from "../utils/Enums";
 
 export default function Login() {
   const label = { inputProps: { "aria-label": "Color switch demo" } };
+  let navigate=useNavigate()
 
   return (
     <div
@@ -19,6 +22,7 @@ export default function Login() {
         display: "flex",
         justifyContent: "center",
         marginTop: "40px",
+        marginBottom: "40px",
       }}
     >
       <Container fluid>
@@ -46,7 +50,6 @@ export default function Login() {
         </Row>
         <Row style={{ marginTop: "35px" }}>
           <Col
-          
             style={{
               display: "flex",
               flexDirection: "column",
@@ -97,7 +100,8 @@ export default function Login() {
 
                 <Switch {...label} defaultChecked color="default" />
 
-                <Container>
+                <Container
+                 onClick={()=>navigate(STRINGS.ROUTES.DASHBOARD)}>
                   <div className="loginBtn">
                     <p>LETS GO</p>
                   </div>

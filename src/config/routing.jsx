@@ -5,11 +5,11 @@ import {
     Route,
 } from "react-router-dom";
 import React, { lazy, Suspense } from 'react';
-// import Login from "../pages/Login";
 import Loading from "../pages/Loading";
 import { STRINGS } from "../utils/Enums";
 
 const Login = lazy(() => import('../pages/Login'))
+const Dashboard = lazy(() => import('../pages/Dashboard'))
 
 export default function Routing() {
 
@@ -21,6 +21,14 @@ export default function Routing() {
               element={
                 <SuspensedView>
                   <Login />
+                </SuspensedView>
+              }
+            />
+            <Route
+              path={`${STRINGS.ROUTES.DASHBOARD}`}
+              element={
+                <SuspensedView>
+                  <Dashboard />
                 </SuspensedView>
               }
             />

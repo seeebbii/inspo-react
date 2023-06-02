@@ -55,3 +55,17 @@
     width: 70vw !important;
   }
 }
+
+
+
+/* DASHBOARD */
+
+.menuIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+  background-color: black;
+}

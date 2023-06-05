@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+/* FONTS */
+
+@font-face {
+  font-family: "Helvetica bold";
+  src: url('../assets/fonts/Helvetica-Bold.ttf');
+}
+@font-face {
+  font-family: "Helvetica light";
+  src: url('../assets/fonts/helvetica-light-587ebe5a59211.ttf');
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url('../assets/fonts/Helvetica.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+/* LOGIN */
+.loginBtn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 50px;
+  padding-top:15px ;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.downloadBtn {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding-top:10px ;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 860px) {
+  .loginBox{
+    width: 50vw !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .loginBox{
+    width: 70vw !important;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* DASHBOARD */
+
+.menuIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+  background-color: black;
 }

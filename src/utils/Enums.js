@@ -8,7 +8,8 @@ export const STRINGS={
     },
     ROUTES:{
         LOGIN:"/",
-        MAIN:"/main",
+        TABLES:"/tables",
+        RTL:"/rtl",
         DASHBOARD:'/dashboard'
     }
 

@@ -43,18 +43,8 @@ const AsideMenu = () => {
   const location = useLocation();
   const [selectedKeys, setSelectedKeys] = useState([]);
 
-  // Retrieve the session object from session storage
-  const sessionStr = sessionStorage.getItem("user");
-  const session = JSON.parse(sessionStr);
-
-  // Access the userType key from the session object
-  const userType = session?.userType;
-  console.log("type", userType); // print the userType value to the console
-
   useEffect(() => {
-    // Split the pathnames into an array and remove empty items
     const pathnames = location.pathname.split("/").filter(Boolean);
-    // Select the first pathname as the selected key
     setSelectedKeys([pathnames[0]]);
   }, [location]);
 
@@ -71,7 +61,17 @@ const AsideMenu = () => {
           </div>
         }
       >
-        <Link style={{textDecorationLine:"none"}}  to={`${STRINGS.ROUTES.DASHBOARD}`}>Dashboard</Link>
+        <Link
+          style={{
+            textDecorationLine: "none",
+            fontSize: "12px",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+            fontWeight: "700",
+          }}
+          to={`${STRINGS.ROUTES.DASHBOARD}`}
+        >
+          Dashboard
+        </Link>
       </Menu.Item>
 
       <Menu.Item
@@ -79,29 +79,151 @@ const AsideMenu = () => {
         icon={
           <div className="menuIcon">
             <FontAwesomeIcon
-              icon={faHouse}
+              icon={faChartSimple}
               style={{ color: "#ffffff", fontSize: "12px" }}
             />
           </div>
         }
       >
-        <Link style={{textDecorationLine:"none"}} to={`${STRINGS.ROUTES.TABLES}`}>Tables</Link>
+        <Link
+          style={{
+            textDecorationLine: "none",
+            fontSize: "12px",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+            fontWeight: "700",
+          }}
+          to={`${STRINGS.ROUTES.TABLES}`}
+        >
+          Tables
+        </Link>
       </Menu.Item>
       <Menu.Item
         key="rtl"
         icon={
           <div className="menuIcon">
             <FontAwesomeIcon
-              icon={faHouse}
+              icon={faWrench}
               style={{ color: "#ffffff", fontSize: "12px" }}
             />
           </div>
         }
       >
-        <Link style={{textDecorationLine:"none"}} to={`${STRINGS.ROUTES.RTL}`}>RTL</Link>
+        <Link
+          style={{
+            textDecorationLine: "none",
+            fontSize: "12px",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+            fontWeight: "700",
+          }}
+          to={`${STRINGS.ROUTES.RTL}`}
+        >
+          RTL
+        </Link>
       </Menu.Item>
-
-
+      <div style={{ padding: "10px 7px" }}>
+        <Link
+          style={{
+            textDecorationLine: "none",
+            color: "black",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+          }}
+          to={`${STRINGS.ROUTES.RTL}`}
+        >
+          Account Pages
+        </Link>
+      </div>
+      <Menu.Item
+        key="profile"
+        icon={
+          <div className="menuIcon">
+            <FontAwesomeIcon
+              icon={faUser}
+              style={{ color: "#ffffff", fontSize: "12px" }}
+            />
+          </div>
+        }
+      >
+        <Link
+          style={{
+            textDecorationLine: "none",
+            fontSize: "12px",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+            fontWeight: "700",
+          }}
+          to={`${STRINGS.ROUTES.PROFILE}`}
+        >
+          Profile
+        </Link>
+      </Menu.Item>
+      <Menu.Item
+        key="approval"
+        icon={
+          <div className="menuIcon">
+            <FontAwesomeIcon
+              icon={faFile}
+              style={{ color: "#ffffff", fontSize: "12px" }}
+            />
+          </div>
+        }
+      >
+        <Link
+          style={{
+            textDecorationLine: "none",
+            fontSize: "12px",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+            fontWeight: "700",
+          }}
+          to={`${STRINGS.ROUTES.APPROVAL}`}
+        >
+          Approval
+        </Link>
+      </Menu.Item>
+      <Menu.Item
+        key="forms"
+        icon={
+          <div className="menuIcon">
+            <FontAwesomeIcon
+              icon={faSheetPlastic}
+              style={{ color: "#ffffff", fontSize: "12px" }}
+            />
+          </div>
+        }
+      >
+        <Link
+          style={{
+            textDecorationLine: "none",
+            fontSize: "12px",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+            fontWeight: "700",
+          }}
+          to={`${STRINGS.ROUTES.FORMS}`}
+        >
+          Forms
+        </Link>
+      </Menu.Item>
+      <Menu.Item
+        key="ratings"
+        icon={
+          <div className="menuIcon">
+            <FontAwesomeIcon
+              icon={faRocket}
+              style={{ color: "#ffffff", fontSize: "12px" }}
+            />
+          </div>
+        }
+      >
+        <Link
+          style={{
+            textDecorationLine: "none",
+            fontSize: "12px",
+            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+            fontWeight: "700",
+          }}
+          to={`${STRINGS.ROUTES.RATINGS}`}
+        >
+          Ratings{" "}
+        </Link>
+      </Menu.Item>
       {/* <Menu.Item key="9" icon={<FileOutlined />} title="Files">
                 <Link to="/files">Files</Link>
             </Menu.Item> */}

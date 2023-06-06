@@ -10,7 +10,11 @@ export const STRINGS={
         LOGIN:"/",
         TABLES:"/tables",
         RTL:"/rtl",
-        DASHBOARD:'/dashboard'
+        DASHBOARD:'/dashboard',
+        PROFILE:'/profile',
+        FORMS:'/forms',
+        RATINGS:'/ratings',
+        APPROVAL:'/approval'
     }
 
 

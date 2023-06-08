@@ -39,16 +39,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-const AsideMenu = () => {
+const AsideMenu = ({collapsed}) => {
   const location = useLocation();
   const [selectedKeys, setSelectedKeys] = useState([]);
 
   useEffect(() => {
     const pathnames = location.pathname.split("/").filter(Boolean);
-    setSelectedKeys([pathnames[0]]);
-  }, [location]);
+   setSelectedKeys([pathnames[0]]);
+  }, [location,collapsed]);
 
-  return (
+  return <>
+  <div style={{display:"flex",flexDirection:"column",justifyContent:"flex"}}>
     <Menu selectedKeys={selectedKeys} mode="inline">
       <Menu.Item
         key="dashboard"
@@ -120,7 +121,7 @@ const AsideMenu = () => {
           RTL
         </Link>
       </Menu.Item>
-      <div style={{ padding: "10px 7px" }}>
+   {!collapsed &&   <div style={{ padding: "10px 7px" }}>
         <Link
           style={{
             textDecorationLine: "none",
@@ -131,7 +132,7 @@ const AsideMenu = () => {
         >
           Account Pages
         </Link>
-      </div>
+      </div>}
       <Menu.Item
         key="profile"
         icon={
@@ -224,11 +225,11 @@ const AsideMenu = () => {
           Ratings{" "}
         </Link>
       </Menu.Item>
-      {/* <Menu.Item key="9" icon={<FileOutlined />} title="Files">
-                <Link to="/files">Files</Link>
-            </Menu.Item> */}
+      
     </Menu>
-  );
+
+  </div>
+      </>
 };
 
 export default AsideMenu;

@@ -47,35 +47,29 @@ const SideBar = () => {
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
     >
-      {/* <div
-                    style={{
-                        height: 32,
-                        margin: 16,
-                        background: "rgba(255, 255, 255, 0.2)",
-                    }}
-                /> */}
-      <div className="logo">
-        {!collapsed && (
-          <>
-            <div style={{ marginTop: "8px" }}>
-              <p
-                style={{
-                  fontSize: "24px",
-                  textAlign: "center",
-                  fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                }}
-              >
-                INSPO
-              </p>
-            </div>
-            <hr />
-          </>
-        )}
-        {/* {collapsed && <img src={logo} alt="Logo" />} */}
-      </div>
-      <div style={{ height: "calc(100vh - 130px)" }}>
-        <AsideMenu />
-      </div>
+        <div className="logo">
+          {!collapsed && (
+            <>
+              <div style={{ marginTop: "8px" }}>
+                <p
+                  style={{
+                    fontSize: "24px",
+                    textAlign: "center",
+                    fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+                  }}
+                >
+                  INSPO
+                </p>
+              </div>
+              <hr />
+            </>
+          )}
+          {/* {collapsed && <img src={logo} alt="Logo" />} */}
+        </div>
+        <div style={{ height: "calc(100vh - 130px)" }}>
+          <AsideMenu collapsed={collapsed} />
+        </div>
+      
     </Sider>
   );
 };

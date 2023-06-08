@@ -2,15 +2,15 @@
 
 @font-face {
   font-family: "Helvetica bold";
-  src: url('../assets/fonts/Helvetica-Bold.ttf');
+  src: url('./assets/fonts/Helvetica-Bold.ttf');
 }
 @font-face {
   font-family: "Helvetica light";
-  src: url('../assets/fonts/helvetica-light-587ebe5a59211.ttf');
+  src: url('./assets/fonts/helvetica-light-587ebe5a59211.ttf');
 }
 @font-face {
   font-family: "Helvetica";
-  src: url('../assets/fonts/Helvetica.ttf');
+  src: url('./assets/fonts/Helvetica.ttf');
 }
 
 
@@ -79,4 +79,31 @@
   border: 2px solid black;
   border-radius: 6px;
   cursor: pointer;
+}
+
+/* PROFILE */
+
+.profileBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 80px;
+  /* padding: 0px 15px; */
+  border: 2px solid black;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 11px;
+}
+.viewAllBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 120px;
+  /* padding: 0px 15px; */
+  border: 1px solid black;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 11px;
 }

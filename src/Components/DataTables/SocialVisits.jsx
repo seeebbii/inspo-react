@@ -22,7 +22,7 @@ export default function SocialVisits() {
   ];
 
   return <>
-   <TableContainer component={Paper}>
+   <TableContainer component={Paper}   className="customScroll">
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead style={{border:"2px solid black",borderRight:"none",borderLeft:"none"}}>
           <TableRow  >

@@ -107,3 +107,47 @@
   cursor: pointer;
   font-size: 11px;
 }
+
+/* Forms */
+
+.formBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 80px;
+  /* padding: 0px 15px; */
+  border: 2px solid black;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.active{
+  background-color: black !important;
+  color: white !important;
+}
+
+
+.customScroll::-webkit-scrollbar {
+  width: 7px;
+  border-radius:8px ;
+}
+
+/* Track */
+.customScroll::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+
+}
+
+/* Handle */
+.customScroll::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+  border-radius:8px ;
+  border: 1px solid black;
+}
+
+/* Handle on hover */
+.customScroll::-webkit-scrollbar-thumb:hover {
+  background: #ffffff; 
+}

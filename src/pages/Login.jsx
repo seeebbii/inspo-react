@@ -31,7 +31,7 @@ export default function Login() {
           <Col style={{ display: "flex", justifyContent: "space-between" }}>
             <p style={{fontWeight:'700',fontSize:"20px",fontFamily:"Helvetica bold "}}>INSPO</p>
               <div className="downloadBtn">
-                <p style={{fontSize:"10px",fontWeight:"700"}}>DOWNLOAD INSPO</p>
+                <p style={{fontSize:"10px",fontWeight:"700",paddingTop:"4px"}}>DOWNLOAD INSPO</p>
               </div>
           </Col>
           <Col md="3"></Col>

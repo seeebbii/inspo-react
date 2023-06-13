@@ -14,7 +14,9 @@ export const STRINGS={
         PROFILE:'/profile',
         FORMS:'/forms',
         RATINGS:'/ratings',
-        APPROVAL:'/approval'
+        APPROVAL:'/approval',
+        CONCEPT_APPROVAL:'/approval/concept',
+        INFLUENCER_APPROVAL:'/approval/influencer',
     }
 
 

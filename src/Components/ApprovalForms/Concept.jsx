@@ -1,13 +1,12 @@
 
 import { Col, Container, Row } from 'reactstrap'
-import React from 'react'
-import { STRINGS } from '../utils/Enums'
+import React from 'react' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { STRINGS } from '../../utils/Enums'
 
-export default function RTLComponent() {
+export default function Concept() {
 
-    
   return <>
   <Container fluid>
     <Row style={{height:"100vh"}}>
@@ -40,7 +39,7 @@ export default function RTLComponent() {
             </div>
             <br />
         <div style={{height:"90vh",width:"100%",borderRadius:"8px", border:"2px solid black",margin:"auto",display:"flex",justifyContent:"center",alignItems:"center"}}>
-          <p style={{fontFamily:STRINGS.FONTS.HELVITICA_BOLD,fontSize:"35px"}}>EMAIL SYSTEM HERE</p>
+          <p style={{fontFamily:STRINGS.FONTS.HELVITICA_BOLD,fontSize:"35px"}}>Concept</p>
          
         </div>
       </Col>

@@ -13,6 +13,8 @@ const Forms = lazy(() => import("../pages/Forms"));
 const Approval = lazy(() => import("../pages/Approval"));
 const Ratings = lazy(() => import("../pages/Ratings"));
 const Profile = lazy(() => import("../pages/Profile"));
+const Concept = lazy(() => import("../Components/ApprovalForms/Concept"));
+const Influencer = lazy(() => import("../Components/ApprovalForms/Influencer"));
 
 export default function Routing() {
   return (
@@ -84,6 +86,26 @@ export default function Routing() {
               <MasterLayout>
                 <SuspensedView>
                   <Approval />
+                </SuspensedView>
+              </MasterLayout>
+            }
+          />
+          <Route
+            path={`${STRINGS.ROUTES.CONCEPT_APPROVAL}`}
+            element={
+              <MasterLayout>
+                <SuspensedView>
+                  <Concept />
+                </SuspensedView>
+              </MasterLayout>
+            }
+          />
+          <Route
+            path={`${STRINGS.ROUTES.INFLUENCER_APPROVAL}`}
+            element={
+              <MasterLayout>
+                <SuspensedView>
+                  <Influencer />
                 </SuspensedView>
               </MasterLayout>
             }

@@ -45,7 +45,7 @@ export default function Profile() {
             <br />
             {/* Profile Portion    */}
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <Container>
+              <Container fluid> 
                 <Row>
                   <Col>
                     <div
@@ -116,15 +116,17 @@ export default function Profile() {
 
             {/* Settings portion */}
 
-            <Container>
+            <Container fluid>
               <Row>
                 {/* BOX one */}
                 <Col md="4">
                   <div
+                  className="customScroll"
                     style={{
                       border: "2px solid black",
                       borderRadius: "8px",
                       height: "325px",
+                      overflow:"auto",
                       padding: "12px",
                     }}
                   >
@@ -158,7 +160,7 @@ export default function Profile() {
                         style={{
                           fontSize: "10px",
                           fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          lineHeight: "2px",
+                          lineHeight: "10px",
                           paddingTop: "15px",
                         }}
                       >
@@ -177,7 +179,8 @@ export default function Profile() {
                         style={{
                           fontSize: "10px",
                           fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          lineHeight: "2px",
+                          lineHeight: "10px",
+
                           paddingTop: "15px",
                         }}
                       >
@@ -196,7 +199,8 @@ export default function Profile() {
                         style={{
                           fontSize: "10px",
                           fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          lineHeight: "2px",
+                                                    lineHeight: "10px",
+
                           paddingTop: "15px",
                         }}
                       >
@@ -224,7 +228,8 @@ export default function Profile() {
                         style={{
                           fontSize: "10px",
                           fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          lineHeight: "2px",
+                                                    lineHeight: "10px",
+
                           paddingTop: "15px",
                         }}
                       >
@@ -243,7 +248,8 @@ export default function Profile() {
                         style={{
                           fontSize: "10px",
                           fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          lineHeight: "2px",
+                                                  lineHeight: "10px",
+
                           paddingTop: "15px",
                         }}
                       >
@@ -262,7 +268,8 @@ export default function Profile() {
                         style={{
                           fontSize: "10px",
                           fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          lineHeight: "2px",
+                                                  lineHeight: "10px",
+
                           paddingTop: "15px",
                         }}
                       >
@@ -274,11 +281,13 @@ export default function Profile() {
                 {/* Box two */}
                 <Col md="4">
                   <div
+                  className="customScroll"
                     style={{
                       border: "2px solid black",
                       borderRadius: "8px",
                       height: "325px",
                       padding: "15px",
+                      overflow:"auto"
                     }}
                   >
                     <p
@@ -413,13 +422,15 @@ export default function Profile() {
                   </div>
                 </Col>
                 {/* Box three */}
-                <Col md="4">
+                <Col md="4" >
                   <div
+                  className="customScroll"
                     style={{
                       border: "2px solid black",
                       borderRadius: "8px",
                       height: "325px",
                       padding: "15px",
+                      overflow:"auto"
                     }}
                   >
                     <p
@@ -667,7 +678,7 @@ export default function Profile() {
 
             {/* PROJECT  */}
 
-            <Container style={{ margin: "10px 0px" }}>
+            <Container fluid style={{ margin: "10px 0px" }}>
               <Row>
                 <Col>
                   <div
@@ -690,12 +701,13 @@ export default function Profile() {
                     <Container>
                       <Row>
                         <Col md="4">
-                          <img
+                          <div style={{width:"100%"}}>
+                          <img 
                             src={launch}
-                            style={{ borderRadius: "8px" }}
-                            width={320}
+                            style={{display:"block", borderRadius: "8px" }}
                             height={150}
                           />{" "}
+                          </div>
                           <br />
                           <span
                             style={{
@@ -737,13 +749,15 @@ export default function Profile() {
                             </p>
                           </div>
                         </Col>
+                       
                         <Col md="4">
-                          <img
+                          <div style={{width:"100%"}}>
+                          <img 
                             src={launch}
-                            style={{ borderRadius: "8px" }}
-                            width={320}
+                            style={{display:"block", borderRadius: "8px" }}
                             height={150}
                           />{" "}
+                          </div>
                           <br />
                           <span
                             style={{
@@ -785,13 +799,15 @@ export default function Profile() {
                             </p>
                           </div>
                         </Col>
+                       
                         <Col md="4">
-                          <img
+                          <div style={{width:"100%"}}>
+                          <img 
                             src={launch}
-                            style={{ borderRadius: "8px" }}
-                            width={320}
+                            style={{display:"block", borderRadius: "8px" }}
                             height={150}
                           />{" "}
+                          </div>
                           <br />
                           <span
                             style={{
@@ -833,6 +849,7 @@ export default function Profile() {
                             </p>
                           </div>
                         </Col>
+                       
                       </Row>
                     </Container>
                   </div>

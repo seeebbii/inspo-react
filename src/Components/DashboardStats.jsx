@@ -6,7 +6,7 @@ import { STRINGS } from '../utils/Enums';
 
 export default function DashboardStats() {
   return (
-    <Container style={{ marginTop: "10px" }}>
+    <Container fluid style={{ marginTop: "10px" }}>
     <Row>
       <Col md="3">
         <div

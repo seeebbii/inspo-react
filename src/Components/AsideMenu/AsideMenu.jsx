@@ -47,6 +47,7 @@ const AsideMenu = ({collapsed}) => {
     const pathnames = location.pathname.split("/").filter(Boolean);
    setSelectedKeys([pathnames[0]]);
   }, [location,collapsed]);
+   
 
   return <>
   <div style={{display:"flex",flexDirection:"column",justifyContent:"flex"}}>

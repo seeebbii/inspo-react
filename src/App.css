@@ -151,3 +151,10 @@
 .customScroll::-webkit-scrollbar-thumb:hover {
   background: #ffffff; 
 }
+
+@media screen and (max-width: 789px) {
+  .approvalBox {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}

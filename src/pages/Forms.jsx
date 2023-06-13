@@ -53,7 +53,7 @@ export default function Forms() {
             <br />
             {/* Form Header Portion    */}
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <Container>
+              <Container fluid>
                 <Row>
                   <Col>
                     <div
@@ -138,7 +138,7 @@ export default function Forms() {
 
             {/* PENDING FORM TABS   */}
             {selectedTab==0 &&
-             <Container
+             <Container fluid
              style={{
                border: "2px solid black",
                borderRadius: "8px",
@@ -404,7 +404,7 @@ export default function Forms() {
 
             {/* Ratings FORM TABS   */}
           { selectedTab==1 && 
-             <Container
+             <Container fluid
              style={{
                border: "2px solid black",
                borderRadius: "8px",
@@ -670,7 +670,7 @@ export default function Forms() {
 
             {/* Scheduled FORM TABS   */}
             {selectedTab==2 &&
-                <Container
+                <Container fluid
                 style={{
                   border: "2px solid black",
                   borderRadius: "8px",

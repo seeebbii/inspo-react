@@ -73,7 +73,6 @@ export default function Dashboard() {
       colors: ["#000000"],
       chart: {
         type: "bar",
-        width: 50,
         toolbar: {
           show: false,
         },
@@ -85,7 +84,7 @@ export default function Dashboard() {
     series: [
       {
         name: "series-1",
-        data: [10, 22, 15, 26, 25],
+        data: [420, 218, 230, 190, 350],
       },
     ],
   };
@@ -130,7 +129,7 @@ export default function Dashboard() {
 
             {/* Graphs */}
 
-            <Container style={{ marginTop: "10px" }}>
+            <Container fluid style={{ marginTop: "10px" }}>
               <Row>
                 <Col md="8">
                   <div
@@ -181,6 +180,9 @@ export default function Dashboard() {
                     border: "2px solid black",
                     borderRadius: "8px",
                     padding: "15px",
+                    display:"flex",
+                    flexDirection:"column",
+                    justifyContent:"space-between"
                   }}
                 >
                   <div
@@ -204,8 +206,8 @@ export default function Dashboard() {
                     options={barGraphConfig.options}
                     series={barGraphConfig.series}
                     type="bar"
-                    height={400}
                     // width="500"
+                    height={400}
                   />
                 </Col>
               </Row>
@@ -213,7 +215,7 @@ export default function Dashboard() {
 
             {/* DATA TABLES  */}
 
-            <Container style={{ marginTop: "10px" }}>
+            <Container fluid style={{ marginTop: "10px" }}>
               <Row>
                 <Col md="8">
                   <div

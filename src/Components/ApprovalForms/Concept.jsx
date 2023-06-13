@@ -1,18 +1,18 @@
+import { Col, Container, Row } from "reactstrap";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { STRINGS } from "../../utils/Enums";
+import ApprovalsTable from "../DataTables/ApprovalsTable";
 
-import { Col, Container, Row } from 'reactstrap'
-import React from 'react' 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { STRINGS } from '../../utils/Enums'
-
-export default function Concept() {
-
-  return <>
-  <Container fluid>
-    <Row style={{height:"100vh"}}>
-      <Col style={{marginTop:"20px"}}>
-         {/* Search Bar */}
-         <div
+export default function Influencer() {
+  return (
+    <>
+      <Container fluid>
+        <Row style={{ height: "100vh" }}>
+          <Col style={{ marginTop: "20px" }}>
+            {/* Search Bar */}
+            <div
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -38,15 +38,48 @@ export default function Concept() {
               />
             </div>
             <br />
-        <div style={{height:"90vh",width:"100%",borderRadius:"8px", border:"2px solid black",margin:"auto",display:"flex",justifyContent:"center",alignItems:"center"}}>
-          <p style={{fontFamily:STRINGS.FONTS.HELVITICA_BOLD,fontSize:"35px"}}>Concept</p>
-         
-        </div>
-      </Col>
-    </Row>
-  </Container>
-  
-  
-  </>
-  
+            <Container fluid >
+              <Row>
+                <Col>
+                  <div
+                  className="customScroll"
+                    style={{
+                      border: "2px solid black",
+                      borderRadius: "8px",
+                      height:"90vh",
+                      overflow:"auto",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        padding: "15px ",
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontSize: "17px",
+                          fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+                        }}
+                      >
+                       CONCEPT APPROVAL<br />{" "}
+                      </p>
+                      <div className="dashboardBtn">
+                        <p style={{ fontSize: "11px", fontWeight: "700" }}>
+                          SEE ALL
+                        </p>
+                      </div>
+                    </div>
+
+                    <ApprovalsTable type="CONCEPT" />
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }

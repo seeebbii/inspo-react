@@ -1,24 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  FileOutlined,
-  PieChartOutlined,
-  UserOutlined,
-  DesktopOutlined,
-  FileTextTwoTone,
-  TeamOutlined,
-  HomeOutlined,
-  FileTextOutlined,
-  CopyOutlined,
-  BankOutlined,
-  DollarCircleOutlined,
-  SettingOutlined,
-  CreditCardOutlined,
-  ContainerOutlined,
-  TagsOutlined,
-  AppstoreOutlined,
-  EnvironmentOutlined,
-  BarChartOutlined,
-} from "@ant-design/icons";
+ 
 import { Breadcrumb, Layout, Menu, theme, Avatar } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";

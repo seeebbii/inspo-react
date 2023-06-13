@@ -12,8 +12,17 @@ import Chart from "react-apexcharts";
 import DashboardStats from "../Components/DashboardStats";
 import PageVisitsTable from "../Components/DataTables/PageVisitsTable";
 import SocialVisits from "../Components/DataTables/SocialVisits";
+import ApprovalsTable from "../Components/DataTables/ApprovalsTable";
+import { Switch } from "@mui/material";
 
 export default function Dashboard() {
+  const [init, setInit] = useState({
+    selectedTab: 0,
+  });
+  const label = { inputProps: { "aria-label": "Color switch demo" } };
+
+  let { selectedTab } = init;
+
   let initialStateLine = {
     options: {
       stroke: {
@@ -180,9 +189,9 @@ export default function Dashboard() {
                     border: "2px solid black",
                     borderRadius: "8px",
                     padding: "15px",
-                    display:"flex",
-                    flexDirection:"column",
-                    justifyContent:"space-between"
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
                   }}
                 >
                   <div
@@ -228,26 +237,25 @@ export default function Dashboard() {
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        padding:"15px "
+                        padding: "15px ",
                       }}
                     >
-                        <p
-                          style={{
-                            fontSize: "17px",
-                            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          }}
-                        >
-                          PAGE VISITS <br />{" "}
+                      <p
+                        style={{
+                          fontSize: "17px",
+                          fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+                        }}
+                      >
+                        PAGE VISITS <br />{" "}
+                      </p>
+                      <div className="dashboardBtn">
+                        <p style={{ fontSize: "11px", fontWeight: "700" }}>
+                          SEE ALL
                         </p>
-                        <div className="dashboardBtn">
-                          <p style={{ fontSize: "11px", fontWeight: "700" }}>
-                           SEE ALL
-                          </p>
                       </div>
                     </div>
 
-                    <PageVisitsTable />        
-
+                    <PageVisitsTable />
                   </div>
                 </Col>
 
@@ -258,32 +266,90 @@ export default function Dashboard() {
                     borderRadius: "8px",
                   }}
                 >
-                     
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      padding: "15px ",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontSize: "17px",
+                        fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+                      }}
+                    >
+                      SOCIAL VISITS <br />{" "}
+                    </p>
+                    <div className="dashboardBtn">
+                      <p style={{ fontSize: "11px", fontWeight: "700" }}>
+                        SEE ALL
+                      </p>
+                    </div>
+                  </div>
+
+                  <SocialVisits />
+                </Col>
+              </Row>
+            </Container>
+
+            {/* APPROVED FORMS              */}
+
+            <Container fluid style={{ marginTop: "10px" }}>
+              <Row>
+                <Col>
+                  <div
+                    className="customScroll"
+                    style={{
+                      border: "2px solid black",
+                      borderRadius: "8px",
+                      height: "90vh",
+                      overflow: "auto",
+                    }}
+                  >
                     <div
-                  
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        padding:"15px "
+                        padding: "15px ",
                       }}
                     >
-                        <p
-                          style={{
-                            fontSize: "17px",
-                            fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
-                          }}
+                      <p
+                        style={{
+                          fontSize: "17px",
+                          fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+                        }}
+                      >
+                        CONCEPT APPROVAL
+                        <br />{" "}
+                      </p>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div
+                          onClick={() => setInit({ ...init, selectedTab: 0 })}
+                          className={`formBtn ${selectedTab == 0 && "active"}`}
+                          style={{ marginRight: "5px" }}
                         >
-                          SOCIAL VISITS <br />{" "}
-                        </p>
-                        <div className="dashboardBtn">
-                          <p style={{ fontSize: "11px", fontWeight: "700" }}>
-                           SEE ALL
-                          </p>
+                          <p style={{ paddingTop: "15px" }}>APPROVED</p>
+                        </div>
+                        <div
+                          onClick={() => setInit({ ...init, selectedTab: 1 })}
+                          className={`formBtn ${selectedTab == 1 && "active"}`}
+                          style={{ marginRight: "5px" }}
+                        >
+                          <p style={{ paddingTop: "15px" }}>DENIED</p>
+                        </div>
+                        
+                        <Switch {...label} defaultChecked color="default" />
                       </div>
                     </div>
 
-                    <SocialVisits />        
-
+                    <ApprovalsTable type="conceptApproval" />
+                  </div>
                 </Col>
               </Row>
             </Container>

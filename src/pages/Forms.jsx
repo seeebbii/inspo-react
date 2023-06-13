@@ -6,7 +6,7 @@ import { STRINGS } from "../utils/Enums";
 import { Switch } from "@mui/material";
 import boxThreeImg from "../assets/Images/boxThreeImg.png";
 import SocialVisits from "../Components/DataTables/SocialVisits";
-import FormsTable from "../Components/DataTables/Forms";
+import FormsTable from "../Components/DataTables/FormsTable";
 
 export default function Forms() {
 

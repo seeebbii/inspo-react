@@ -1,18 +1,18 @@
-
-import { Col, Container, Row } from 'reactstrap'
-import React from 'react' 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { STRINGS } from '../../utils/Enums'
+import { Col, Container, Row } from "reactstrap";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { STRINGS } from "../../utils/Enums";
+import ApprovalsTable from "../DataTables/ApprovalsTable";
 
 export default function Influencer() {
-
-  return <>
-  <Container fluid>
-    <Row style={{height:"100vh"}}>
-      <Col style={{marginTop:"20px"}}>
-         {/* Search Bar */}
-         <div
+  return (
+    <>
+      <Container fluid>
+        <Row style={{ height: "100vh" }}>
+          <Col style={{ marginTop: "20px" }}>
+            {/* Search Bar */}
+            <div
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -38,15 +38,48 @@ export default function Influencer() {
               />
             </div>
             <br />
-        <div style={{height:"90vh",width:"100%",borderRadius:"8px", border:"2px solid black",margin:"auto",display:"flex",justifyContent:"center",alignItems:"center"}}>
-          <p style={{fontFamily:STRINGS.FONTS.HELVITICA_BOLD,fontSize:"35px"}}>INFLUENCER</p>
-         
-        </div>
-      </Col>
-    </Row>
-  </Container>
-  
-  
-  </>
-  
+            <Container fluid >
+              <Row>
+                <Col>
+                  <div
+                  className="customScroll"
+                    style={{
+                      border: "2px solid black",
+                      borderRadius: "8px",
+                      height:"90vh",
+                      overflow:"auto",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        padding: "15px ",
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontSize: "17px",
+                          fontFamily: STRINGS.FONTS.HELVITICA_BOLD,
+                        }}
+                      >
+                       INFLUENCER APPROVAL<br />{" "}
+                      </p>
+                      <div className="dashboardBtn">
+                        <p style={{ fontSize: "11px", fontWeight: "700" }}>
+                          SEE ALL
+                        </p>
+                      </div>
+                    </div>
+
+                    <ApprovalsTable  type={"INFLUENCER"} />
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
